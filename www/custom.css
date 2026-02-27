@@ -1,0 +1,33 @@
+.Good_Fit_Color {
+          background-color: #228B22 !important;
+          color: white !important;
+}     
+  
+.Bad_Fit_Color {
+          background-color: #cc2a36 !important;
+          color: white !important;
+}
+  
+  
+.shiny-notification { 
+  position: fixed;
+  top: 50%;
+  left: 45%;
+  right: 33%;
+  width: 100%;
+  max-width: 450px;
+}
+
+h2 {
+  font-weight: bold !important;
+}
+
+.bslib-page-title { 
+  font-weight: bold !important;
+}
+
+.shiny-file-input-progress .progress-bar { 
+  font-size: 0 !important;
+  color: transparent !important; 
+  text-shadow: none !important;
+}
