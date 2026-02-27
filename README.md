@@ -1,9 +1,9 @@
-# Cerebrovascular-Researchers-Toolbox
+# Cerebral Vasomotor Analyzer (CVA)
 
 ---
-Title: "Cerebrovascular Researcher's ToolBox"
+Title: "Cerebral Vasomotor Analyzer"
 Author: "Jacob Matney"
-Date: "2025-09-02"
+Date: "2026-02-27"
 ---
 
 # Introduction
