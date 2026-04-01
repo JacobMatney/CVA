@@ -238,11 +238,14 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
     Base_Matrix_Df$RAP[Base_Matrix_Df$Time > floor(B.Miss.DF$Start[i]) & Base_Matrix_Df$Time < ceiling(B.Miss.DF$End[i])] = NA
     }
     
+    Outputpre <<- Base_Matrix_Df 
     
     Base_Matrix_Df$CrCP = na.approx(Base_Matrix_Df$CrCP, x = Base_Matrix_Df$Time)
     Base_Matrix_Df$RAP = na.approx(Base_Matrix_Df$RAP, x = Base_Matrix_Df$Time)
     
+    Outputppost <<- Base_Matrix_Df 
     }
+    
     
     Base_Matrix_Df[Base_Matrix_Df$CrCP < 0, c("CrCP", "RAP", "MAP", "MCAv", "CPP", "CPI", "CVCi", "PETCO2")] = NA
     
