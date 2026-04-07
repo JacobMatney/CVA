@@ -2,7 +2,7 @@ R_Detect = function(x, y, z) {
 
 withProgress(message = "Beat detection in progress, please wait...", {  
   
-  #------------------------------------------
+#------------------------------------------
 # Input sample frequency (Fs), calculate nyquist freq, 
 # and calculate high and low pass cutoff freq for bandpass 
 # filter. Then calculate filter coeffs. 
@@ -45,7 +45,7 @@ if(y == 2){
 incProgress(amount = 0.25)
 #------------------------------------------
 # For baseline data, find QRS peaks using
-# classical technique by Pan and Tompkins (1985)
+# classical technique by Pan and Tompkins (1985) (ref 1,2). 
 #------------------------------------------
 B.Raw.ECG = Dataset_Base$ECG
 
@@ -82,7 +82,7 @@ Dataset_Base$Beat_Num[B.Peaks$X2] = "beat"
 incProgress(amount = 0.25)
 #------------------------------------------
 # For Stim data, find QRS peaks using
-# classical technique by Pan and Tompkins (1985)
+# classical technique by Pan and Tompkins (1985)(Ref 1,2)
 #------------------------------------------
 S.Raw.ECG = Dataset_Stim$ECG
 
@@ -118,19 +118,16 @@ incProgress(amount = 0.25)
 #Set Beat Num to "Beat" based on index of R wave. 
 Dataset_Stim$Beat_Num[S.Peaks$X2] = "beat"
 
+#---- For debugging, ignore ---- 
 #write_xlsx(Dataset_Base, "Data.xlsx")
-
-
 #Pan1 <<- plot(x = 1:length(B.Raw.ECG[1:10000]), y = B.Raw.ECG[1:10000], type = "l", xaxt = "n", yaxt = "n", ann = FALSE, bty = "n")
-
 #Pan2 <<- plot(x = 1:length(B.Fil.ECG[1:10000]), y = B.Fil.ECG[1:10000], type = "l", xaxt = "n", yaxt = "n", ann = FALSE, bty = "n")
-
 #Pan3 <<- plot(x = 1:length(B.Fil2.ECG[1:10000]), y = B.Fil2.ECG[1:10000], type = "l", xaxt = "n", yaxt = "n", ann = FALSE, bty = "n")
-
 #Pan4 <<- plot(x = 1:length(B.Sqr.ECG[1:10000]), y = B.Sqr.ECG[1:10000], type = "l", xaxt = "n", yaxt = "n", ann = FALSE, bty = "n")
-
 #Pan5 <<- plot(x = 1:length(B.Move.Av.ECG[1:10000]), y = B.Move.Av.ECG[1:10000], type = "l", xaxt = "n", yaxt = "n", ann = FALSE, bty = "n")
+#-------------------------------
 
+#---- Create plots ---- 
 B.Peak_Plot = ggplot(FINALB, aes(x = Time, y = ECG)) + 
   geom_line() +
   geom_point(data = B.Peaks, aes(y = B.Raw.ECG[X2], x = X2), color = "#cc2a36") +
@@ -161,6 +158,9 @@ S.Peak_Plot = ggplotly(S.Peak_Plot) %>%
   rangeslider(start = FINALS$Time[1], end = FINALS$Time[50000])
 
   
+
+
+#---- output results ---- 
 return(list(Base.Plot = B.Peak_Plot, 
             Stim.Plot = S.Peak_Plot, 
             Baseline.Data = Dataset_Base, 
