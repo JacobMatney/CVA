@@ -643,7 +643,7 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
     #---- Baseline Individual Plots ---- 
     Base_MCAv_Plot = ggplot(BaseResampled, aes(x = Time, y = MCAv))+
       geom_line(color = "black")+ 
-      labs(y = "MCAv (cm/s)", x = "Time (s)")+
+      labs(y = "CBFv (cm/s)", x = "Time (s)")+
       theme(axis.title = element_text(face = "bold"), 
             panel.background = element_blank(), 
             axis.line = element_line(color = "black"),
@@ -703,7 +703,7 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
     #---- Stimulus Individual Plots ----   
     Stim_MCAv_Plot = ggplot(StressResampled, aes(x = Time, y = MCAv)) + 
       geom_line(color = "black")+
-      labs(y = "MCAv (cm/s)", x = "Time (s)")+
+      labs(y = "CBFv (cm/s)", x = "Time (s)")+
       theme(axis.title = element_text(face = "bold"), 
             panel.background = element_blank(), 
             axis.line = element_line(color = "black"),
@@ -765,6 +765,9 @@ colnames(BaseResampled) = c("CrCP", "RAP", "CVCi", "MAP", "CPP", "CPI", "PETCO2"
 colnames(StressResampled) = c("CrCP", "RAP", "CVCi", "MAP", "CPP", "CPI", "PETCO2", "CBFv", "Check", "Time")
 
 colnames(Baseline_Ave) = c("CrCP", "RAP", "CVCi", "MAP", "CPP", "CPI", "PETCO2", "CBFv", "Check")
+colnames(Stress_Ave) = c("CrCP", "RAP", "CVCi", "MAP", "CPP", "CPI", "PETCO2", "CBFv", "Check")
+
+colnames(SubComponent) = c("V CrCP", "V RAP", "V MAP","Δ% CBFv", "Check")
     
     # -----------------------------------------------------------------------------#
     # Return List                                                                  #
