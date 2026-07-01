@@ -586,13 +586,13 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
     
     #---- Subcomp Master Plot ----
     SubComp_Master_Plot = ggplot(SubComp_DF2, aes(x = Time)) + 
-      geom_line(aes(y = MCAv, color = "V MCAv")) + 
+      geom_line(aes(y = MCAv, color = "V CBFv")) + 
       geom_line(aes(y = CrCP, color = "V CrCP")) + 
       geom_line(aes(y = RAP, color = "V RAP")) + 
       geom_line(aes(y = MAP, color = "V MAP"))+ 
       scale_color_manual(name = "",
-                         values = c("V MCAv" = "black", "V CrCP" = "deepskyblue", "V RAP" = "red", "V MAP" = "darkolivegreen3"), 
-                         labels = c("V CBFv" = "V MCAv", "V CrCP" = "V CrCP", "V RAP" = "V RAP", "V MAP" = "V MAP"))+
+                         values = c("V CBFv" = "black", "V CrCP" = "deepskyblue", "V RAP" = "red", "V MAP" = "darkolivegreen3"), 
+                         labels = c("V CBFv" = "V CBFv", "V CrCP" = "V CrCP", "V RAP" = "V RAP", "V MAP" = "V MAP"))+
       labs(y = "", x = "Time (s)")+
       geom_hline(yintercept = 0, alpha = .3) +
       theme(axis.title = element_text(face = "bold"), 
