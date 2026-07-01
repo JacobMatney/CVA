@@ -120,7 +120,7 @@ ui = page_sidebar(
       column(width = 6, 
              uiOutput("Baseline_Results"),
              navset_card_tab(
-               nav_panel("MCAv",
+               nav_panel("CBFv",
                          card(full_screen = T, 
                               plotlyOutput("Base_MCAv_Plot"))),
                nav_panel("CrCP",
@@ -148,7 +148,7 @@ ui = page_sidebar(
       column(width = 6, 
              uiOutput("Stim_Results"),
              navset_card_tab(
-               nav_panel("MCAv",
+               nav_panel("CBFv",
                          card(full_screen = T, 
                               plotlyOutput("Stim_MCAv_Plot"))),
                nav_panel("CrCP",
@@ -211,11 +211,11 @@ ui = page_sidebar(
             fluidRow(
               column(width = 12, uiOutput("SubComp_Results")),
               card(full_screen = T, plotlyOutput("Data")),
-              column(width = 3,card(card_header("AUC MCAv (Δ%∙s)"), 
+              column(width = 3,card(card_header("AUC CBFv (Δ%∙s)"), 
                                     textOutput("AUC_MCAv")),
                      card(
                        full_screen = TRUE,
-                       card_header("Δ% MCAv"),
+                       card_header("Δ% CBFv"),
                        card_body(plotlyOutput("Sub_MCAv_Plot"))
                      )),
               column(width = 3, card(card_header("AUC CrCP (Δ%∙s)"), 
