@@ -758,6 +758,11 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
             axis.line = element_line(color = "black"),
             strip.background = element_blank())
     
+    # -----------------------------------------------------------------------------#
+    # Update Naming For all outputs                                                #
+    # -----------------------------------------------------------------------------#
+colnames(BaseResampled) = c("CrCP", "RAP", "CVCi", "MAP", "CPP", "CPI", "PETCO2", "CBFv", "Check", "Time")
+colnames(StressResampled) = c("CrCP", "RAP", "CVCi", "MAP", "CPP", "CPI", "PETCO2", "CBFv", "Check", "Time")
     
     # -----------------------------------------------------------------------------#
     # Return List                                                                  #
