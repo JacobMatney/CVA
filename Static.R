@@ -108,10 +108,10 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
     # -----------------------------------------------------------------------------#
     
     #---- linear interpolated NA values in data (cut for physiocal or data errors) ---- 
-    Baseline_Dataset$SplineMCAv = na.approx(Baseline_Dataset$MCAv, x = Baseline_Dataset$Time)
+    Baseline_Dataset$SplineMCAv = na.approx(Baseline_Dataset$CBFv, x = Baseline_Dataset$Time)
     Baseline_Dataset$SplineMAP = na.approx(Baseline_Dataset$reBAP, x = Baseline_Dataset$Time)
     
-    Stressor_Dataset$SplineMCAv = na.approx(Stressor_Dataset$MCAv, x = Stressor_Dataset$Time)
+    Stressor_Dataset$SplineMCAv = na.approx(Stressor_Dataset$CBFv, x = Stressor_Dataset$Time)
     Stressor_Dataset$SplineMAP = na.approx(Stressor_Dataset$reBAP, x = Stressor_Dataset$Time)
     
     Baseline_Dataset$Beat_Num = as.numeric(Baseline_Dataset$Beat_Num)
