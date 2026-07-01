@@ -763,6 +763,8 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
     # -----------------------------------------------------------------------------#
 colnames(BaseResampled) = c("CrCP", "RAP", "CVCi", "MAP", "CPP", "CPI", "PETCO2", "CBFv", "Check", "Time")
 colnames(StressResampled) = c("CrCP", "RAP", "CVCi", "MAP", "CPP", "CPI", "PETCO2", "CBFv", "Check", "Time")
+
+colnames(Baseline_Ave) = c("CrCP", "RAP", "CVCi", "MAP", "CPP", "CPI", "PETCO2", "CBFv", "Check")
     
     # -----------------------------------------------------------------------------#
     # Return List                                                                  #
