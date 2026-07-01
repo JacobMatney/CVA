@@ -575,8 +575,8 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
       geom_line(aes(y = MCAv, color = "Measured %CBFv")) + 
       geom_line(aes(y = Check, color = "Estimated %CBFv"))+ 
       scale_color_manual(name = "",
-                         values = c("Estimated %MCAv" = "red", "Measured %MCAv" = "black"), 
-                         labels = c("Estimated %MCAv" = "Estimated %CBFv", "Measured %CBFv" = "Measured %CBFv"))+
+                         values = c("Estimated %CBFv" = "red", "Measured %MCAv" = "black"), 
+                         labels = c("Estimated %CBFv" = "Estimated %CBFv", "Measured %CBFv" = "Measured %CBFv"))+
       labs(y = "Value (Δ%)", x = "Time (s)")+
       theme(axis.title = element_text(face = "bold"), 
             panel.background = element_blank(), 
