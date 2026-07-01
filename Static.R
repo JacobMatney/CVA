@@ -9,11 +9,11 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
     # -----------------------------------------------------------------------------#
     Dataset1 = j
     attach(Dataset1)
-    
+    names(Dataset1)[1] = "reBAP"
     
     Dataset3 = m
     attach(Dataset3)
-    
+    names(Dataset3)[1] = "reBAP"
     
     
     # -----------------------------------------------------------------------------#
