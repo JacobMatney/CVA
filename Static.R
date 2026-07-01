@@ -592,7 +592,7 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
       geom_line(aes(y = MAP, color = "V MAP"))+ 
       scale_color_manual(name = "",
                          values = c("V MCAv" = "black", "V CrCP" = "deepskyblue", "V RAP" = "red", "V MAP" = "darkolivegreen3"), 
-                         labels = c("V MCAv" = "V MCAv", "V CrCP" = "V CrCP", "V RAP" = "V RAP", "V MAP" = "V MAP"))+
+                         labels = c("V CBFv" = "V MCAv", "V CrCP" = "V CrCP", "V RAP" = "V RAP", "V MAP" = "V MAP"))+
       labs(y = "", x = "Time (s)")+
       geom_hline(yintercept = 0, alpha = .3) +
       theme(axis.title = element_text(face = "bold"), 
@@ -633,7 +633,7 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
       geom_area(fill = "grey")+
       geom_line()+
       geom_hline(yintercept = 0, alpha = .3)+
-      labs(y = " MCAv (Δ%)", x = "Time (s)")+
+      labs(y = " CBFv (Δ%)", x = "Time (s)")+
       theme(axis.title = element_text(face = "bold"), 
             panel.background = element_blank(), 
             axis.line = element_line(color = "black"),
