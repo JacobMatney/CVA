@@ -540,11 +540,11 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
     
     #---- Baseline MNSE Check ---- 
     Abs_Check = ggplot(data = BaseResampled, aes(x = Time)) + 
-      geom_line(aes(y = MCAv, color = "Measured MCAv")) + 
-      geom_line(aes(y = Check, color = "Estimated MCAv"))+ 
+      geom_line(aes(y = MCAv, color = "Measured CBFv")) + 
+      geom_line(aes(y = Check, color = "Estimated CBFv"))+ 
       scale_color_manual(name = "",
-                         values = c("Estimated MCAv" = "red", "Measured MCAv" = "black"), 
-                         labels = c("Estimated MCAv" = "Estimated MCAv", "Measured MCAv" = "Measured MCAv"))+
+                         values = c("Estimated CBFv" = "red", "Measured CBFv" = "black"), 
+                         labels = c("Estimated CBFv" = "Estimated CBFv", "Measured CBFv" = "Measured CBFv"))+
       labs(y = "Value (cm/s)", x = "Time (s)")+
       theme(axis.title = element_text(face = "bold"), 
             panel.background = element_blank(), 
@@ -558,11 +558,11 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
     
     #---- Stim MNSE Check ---- 
     Stim_Check = ggplot(data = StressResampled, aes(x = Time)) + 
-      geom_line(aes(y = MCAv, color = "Measured MCAv")) + 
-      geom_line(aes(y = Check, color = "Estimated MCAv"))+ 
+      geom_line(aes(y = MCAv, color = "Measured CBFv")) + 
+      geom_line(aes(y = Check, color = "Estimated CBFv"))+ 
       scale_color_manual(name = "",
-                         values = c("Estimated MCAv" = "red", "Measured MCAv" = "black"), 
-                         labels = c("Estimated MCAv" = "Estimated MCAv", "Measured MCAv" = "Measured MCAv"))+
+                         values = c("Estimated CBFv" = "red", "Measured CBFv" = "black"), 
+                         labels = c("Estimated CBFv" = "Estimated CBFv", "Measured CBFv" = "Measured CBFv"))+
       labs(y = "Value (cm/s)", x = "Time (s)")+
       theme(axis.title = element_text(face = "bold"), 
             panel.background = element_blank(), 
@@ -572,11 +572,11 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
     
     #---- Subcomp MNSE Check ---- 
     SubComp_Check = ggplot(data = SubComp_DF2, aes(x = Time)) + 
-      geom_line(aes(y = MCAv, color = "Measured %MCAv")) + 
-      geom_line(aes(y = Check, color = "Estimated %MCAv"))+ 
+      geom_line(aes(y = MCAv, color = "Measured %CBFv")) + 
+      geom_line(aes(y = Check, color = "Estimated %CBFv"))+ 
       scale_color_manual(name = "",
                          values = c("Estimated %MCAv" = "red", "Measured %MCAv" = "black"), 
-                         labels = c("Estimated %MCAv" = "Estimated MCAv", "Measured %MCAv" = "Measured %MCAv"))+
+                         labels = c("Estimated %MCAv" = "Estimated %CBFv", "Measured %CBFv" = "Measured %CBFv"))+
       labs(y = "Value (Δ%)", x = "Time (s)")+
       theme(axis.title = element_text(face = "bold"), 
             panel.background = element_blank(), 
