@@ -3,7 +3,7 @@
 ---
 Title: "Cerebral Vasomotor Analyzer"
 Author: "Jacob Matney"
-Date: "2026-02-27"
+Date: "2026-07-13"
 ---
 
 # Introduction
@@ -53,9 +53,9 @@ Within this repository there is a excel template entitled "CVA Template". You ca
 ![](https://github.com/JacobMatney/CVA/blob/main/IMGs/Download_Template.PNG)
 <br>
 
-To run your own data, you will need to generate and prepare your own data onto this template. Data should be exported as a raw data, where mean arterial pressure data should be placed under "reBAP", middle cerebral artery velocity data should be placed under "MCAv", End-tidal CO2 volume should be placed under "PETCO2"", and the comments that denote each R-wave is placed under "Beat_Num". Raw ECG data should be placed under the "ECG" column. As shown below, ensure that the first sample of each set of data states "beat" under the "Beat_Num" section of the template. **This is crucial for allowing the application to work properly.** You do not need to place any data within the "Sample" column. Examples of filled template can be seen under the GitHub repository.
+To run your own data, you will need to generate and prepare your own data onto this template. Data should be exported as a raw data, where mean arterial pressure data should be placed under "reBAP", middle cerebral artery velocity data should be placed under "MCAv", End-tidal CO2 volume should be placed under "PETCO2"", and the comments that denote each R-wave is placed under "Beat_Num". Raw ECG data should be placed under the "ECG" column. As shown below, ensure that the first sample of each set of data states "1" under the "Beat_Num" section of the template. **This is crucial for allowing the application to work properly.** You do not need to place any data within the "Sample" column. Examples of filled template can be seen under the GitHub repository.
 
-![](https://github.com/JacobMatney/CVA/blob/main/IMGs/IMG1.PNG)
+![](https://github.com/JacobMatney/CVA/blob/main/IMGs/Template_Filled.PNG)
 <br>
 
 Place baseline values within the "Cond-\_Baseline" and stimulus values within the "Cond-\_Stim". You can place both baseline and stimulus data for 2 conditions in the same file (CondA = Condition A, CondB = CondB). You will be able to select which condition you analyze within the application.
@@ -65,11 +65,11 @@ Place baseline values within the "Cond-\_Baseline" and stimulus values within th
 
 ## Working Within the Application
 
-To begin analyzing data, select your file by clicking on the "Browse" button. Upon selection of the data, beat detection will begin automatically, please be patient. Once each R peak is identified, 2 figures will be produced under the "ECG Signal" tab of the navigation bar. These figures will show the ECG tracing for both baseline and stimulus values, as well as a corresponding red dot over each R wave. It is important for researchers to scroll through their tracings (using the scroll bar below each figure) to ensure that there is a red dot supraposed over each R wave for accurate calculations. *Note, that the red dot does NOT need to be placed at the tip of each R wave, but rather just needs to be over the proper signal.* If ECG is missing a red dot, this could be indicitave of poor ECG signal and should be reconsidered for analysis. 
+To begin analyzing data, select your file by clicking on the "Browse" button. Upon selection of the data, beat detection will begin automatically, please be patient. Once each R peak is identified, 2 figures will be produced under the "ECG Signal" tab of the navigation bar. These figures will show the ECG tracing for both baseline and stimulus values, as well as a corresponding red dot over each R wave. It is important for researchers to scroll through their tracings (using the scroll bar below each figure) to ensure that there is a red dot supraposed over each R wave for accurate calculations. *Note, that the red dot does NOT need to be placed at the tip of each R wave, but rather just needs to be over the proper signal.* Due to the first and last cardiac cycle being discarded prior to analysis, the first and last R peaks may not be detect. This is normal. If ECG is missing a red dot elsewhere, this could be indicitave of poor ECG signal and should be reconsidered for analysis.  
 
 Once all cardiac cycles have been identified, the application will automatically begin the analysis of your data with the default settings provided within the app. *Note: Analysis will begin with condition A; if you wish to perform condition B, select Condition B under "select condition".*
 
-For the calculation of absolute cerebrovascular variables (MCAv, CrCP, RAP, CVCi, CPP, CPI, PETCO2 and MAP), select the appropriate settings using the settings under "CrCP and RAP Analyzer" located on the left of the screen. "Height correction" reflects the distance (cm) above the heart to the TCD probe. If data was collected in a supine position, this value should be 0. "Baseline Steady State" reflects the number of seconds from the end of baseline that you wish to be averaged to reflect steady state. Similarly, "Stimulus Steady State" reflects the number of seconds from the end of the stimulus stage that you wish to be averaged to reflect steady state. The mean of the data across these intervals will be populated at the top of the "Absolute Values" panel. 
+For the calculation of absolute cerebrovascular variables (CBFv, CrCP, RAP, CVCi, CPP, CPI, PETCO2 and MAP), select the appropriate settings using the settings under "CrCP and RAP Analyzer" located on the left of the screen. "Height correction" reflects the distance (cm) above the heart to the TCD probe. If data was collected in a supine position, this value should be 0. "Baseline Steady State" reflects the number of seconds from the end of baseline that you wish to be averaged to reflect steady state. Similarly, "Stimulus Steady State" reflects the number of seconds from the end of the stimulus stage that you wish to be averaged to reflect steady state. The mean of the data across these intervals will be populated at the top of the "Absolute Values" panel. 
 
 Settings for the subcomponent analysis of autoregulation can be found under "Subcomponent Analyzer" section to the left of the screen. Using the "Initial Value Average" setting, select the amount of time in seconds from the end of baseline you wish to average to produce steady state inital values of velocity, RAP, MAP, and CrCP. This may or may not be the same averaging duration as the absolute values. Moreso, to determine the steady state contribution of each subcomponent during stimulation, use the "Stimulus Steady State" option to select the number of seconds from the end of the stimulus stage you wish to average to produce steady state values. 
 
