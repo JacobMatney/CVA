@@ -382,13 +382,13 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
     for (i in 1:length(S.Miss.DF$Start)) {
       Stress_Matrix_Df$CrCP[Stress_Matrix_Df$Time > floor(S.Miss.DF$Start[i]) & Stress_Matrix_Df$Time < ceiling(S.Miss.DF$End[i])] = NA
       Stress_Matrix_Df$RAP[Stress_Matrix_Df$Time > floor(S.Miss.DF$Start[i]) & Stress_Matrix_Df$Time < ceiling(S.Miss.DF$End[i])] = NA
-      Stress_Matrix_Df$MAP[Stress_Matrix_Df$Time > floor(S.Miss.DF$Start[i]) & Stress_Matrix_Df$Time < ceiling(S.Miss.DF$End[i])] = NA
+      #Stress_Matrix_Df$MAP[Stress_Matrix_Df$Time > floor(S.Miss.DF$Start[i]) & Stress_Matrix_Df$Time < ceiling(S.Miss.DF$End[i])] = NA
     }
     
     
     Stress_Matrix_Df$CrCP = na.approx(Stress_Matrix_Df$CrCP, x = Stress_Matrix_Df$Time)
     Stress_Matrix_Df$RAP = na.approx(Stress_Matrix_Df$RAP, x = Stress_Matrix_Df$Time)
-    Stress_Matrix_Df$MAP = na.approx(Stress_Matrix_Df$MAP, x = Stress_Matrix_Df$Time)
+   # Stress_Matrix_Df$MAP = na.approx(Stress_Matrix_Df$MAP, x = Stress_Matrix_Df$Time)
   }
     
     Stress_end_beat = length(Base_Matrix_Df$Beat) 
