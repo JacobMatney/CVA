@@ -42,7 +42,7 @@ All of these packages can be manually installed using `install.packages('<packag
 
 # Running the Application
 
-After installation of R and rshiny, the application can be run without the need of direct download. In the console, enter the `shiny::runGitHub("CVA", "JacobMatney", ref = "main"")`.
+After installation of R and rshiny, the application can be run without the need of direct download. In the console, enter the `shiny::runGitHub("CVA", "JacobMatney", ref = "main")`.
 
 The application should then open on your default browser. By utilizing this method, you are ensuring that you are always using the most up-to-date code available.
 
