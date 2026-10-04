@@ -83,6 +83,6 @@ You can export the current results within the analyzer by naming the file you wi
 
 # Conclusion
 
-This application provides an easy to use tool to reliably calculated CrCP and RAP, as well as perform subcompoenent analysis of autoregulation. Although the amount of time each stimulus may be recorded, and the needed time for steady state hemodynamics may differ, this application tries to minimize these issues. If, when using this code, you stumble across a critical error, please provide an example of the error that can be reproduced and fixed.
+This application provides an easy to use tool to reliably calculated CrCP and RAP, as well as perform subcomponenent analysis of autoregulation. Although the amount of time each stimulus may be recorded, and the needed time for steady state hemodynamics may differ, this application tries to minimize these issues. If, when using this code, you stumble across a critical error, please provide an example of the error that can be reproduced and fixed.
 
 # Referencing
