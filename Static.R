@@ -231,8 +231,6 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
     
     
     Base_Matrix_Df = as.data.frame(Base_matrix)
-    BLAH = Base_Matrix_Df
-    blah <<- BLAH
     
     if (B.NA == T) {
     for (i in 1:length(B.Miss.DF$Start)) {
@@ -250,8 +248,6 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
     
     Base_Matrix_Df[Base_Matrix_Df$CrCP < 0, c("CrCP", "RAP", "MAP", "MCAv", "CPP", "CPI", "CVCi", "PETCO2")] = NA
 
-    Basetime = Base_Matrix_Df
-    Basetime <<- Basetime
     
     #Remove first and last detected beats (due to likely half cardiac cycles at start and end of stage)
     Base_end_beat = length(Base_Matrix_Df$Beat) 
@@ -280,7 +276,7 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
     
     # ---- Removing negative CrCP values ---- 
     
-    CrCPCorrectBase = BaseResampled[BaseResampled$CrCP > 0,]
+    CrCPCorrectBase <<- BaseResampled[BaseResampled$CrCP > 0,]
     
     
     
