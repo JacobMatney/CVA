@@ -1,4 +1,4 @@
-options(shiny.maxRequestSize = 30*1024^2, scipen = 999, shiny.launch.browser = .rs.invokeShinyWindowExternal)
+options(shiny.maxRequestSize = 500*1024^2, scipen = 999, shiny.launch.browser = .rs.invokeShinyWindowExternal)
 
 
 source("Static.R")
