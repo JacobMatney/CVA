@@ -58,7 +58,7 @@ To run your own data, you will need to generate and prepare your own data onto t
 ![](https://github.com/JacobMatney/CVA/blob/main/IMGs/Template_Filled.PNG)
 <br>
 
-Place baseline values within the "Cond-\_Baseline" and stimulus values within the "Cond-\_Stim". You can place both baseline and stimulus data for 2 conditions in the same file (CondA = Condition A, CondB = CondB). You will be able to select which condition you analyze within the application.
+Place baseline values within the "Cond-\_Baseline" and stimulus values within the "Cond-\_Stim". You can place both baseline and stimulus data for 2 conditions in the same file (CondA = Condition A, CondB = CondB). You will be able to select which condition you analyze within the application. If you only have resting baseline data to analyze, place the same data into both the "Cond-\_Baseline" and "Cond-\_Stim" portion of the excel file. Both "Cond-\_Baseline" and "Cond-\_Stim" must have data in order for the application to run properly. 
 
 ![](https://github.com/JacobMatney/CRToolbox/blob/main/IMGs/Conditions_Template.PNG?raw=true)
 <br>
