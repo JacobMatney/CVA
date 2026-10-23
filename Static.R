@@ -254,7 +254,6 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
     Base_Matrix_Df = Base_Matrix_Df[- Base_end_beat,]
     Base_Matrix_Df = Base_Matrix_Df[-1,]
     
-    Base_Matrix_Df$Time = 1:length(Base_Matrix_Df$MCAv)
     # -----------------------------------------------------------------------------#
     # Data processing for newly calculated CrCP and RAP                            #
     # -----------------------------------------------------------------------------#
