@@ -231,6 +231,8 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
     
     
     Base_Matrix_Df = as.data.frame(Base_matrix)
+    BLAH = Base_Matrix_Df
+    blah <<- BLAH
     
     if (B.NA == T) {
     for (i in 1:length(B.Miss.DF$Start)) {
