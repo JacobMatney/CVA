@@ -242,12 +242,11 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
     
     Base_Matrix_Df$CrCP = na.approx(Base_Matrix_Df$CrCP, x = Base_Matrix_Df$Time)
     Base_Matrix_Df$RAP = na.approx(Base_Matrix_Df$RAP, x = Base_Matrix_Df$Time)
-    
-    Outputppost <<- Base_Matrix_Df 
+  
     }
     
     
-    #Base_Matrix_Df[Base_Matrix_Df$CrCP < 0, c("CrCP", "RAP", "MAP", "MCAv", "CPP", "CPI", "CVCi", "PETCO2")] = NA
+    Base_Matrix_Df[Base_Matrix_Df$CrCP < 0, c("CrCP", "RAP", "MAP", "MCAv", "CPP", "CPI", "CVCi", "PETCO2")] = NA
 
     Basetime <<- Base_Matrix_Df
     
@@ -264,7 +263,7 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
     BaseT = seq(min(Base_Matrix_Df$Time), max(Base_Matrix_Df$Time), by = .2)
     
     
-    BaseResampled = data.frame(CrCP = approx(Base_Matrix_Df$Time, Base_Matrix_Df$CrCP, xout = BaseT)$y, 
+    BaseResampled = data.frame(CrCP = spline(Base_Matrix_Df$Time, Base_Matrix_Df$CrCP, xout = BaseT)$y, 
                                RAP = spline(Base_Matrix_Df$Time, Base_Matrix_Df$RAP, xout = BaseT)$y, 
                                CVCi = spline(Base_Matrix_Df$Time, Base_Matrix_Df$CVCi, xout = BaseT)$y,
                                MAP = spline(Base_Matrix_Df$Time, Base_Matrix_Df$MAP, xout = BaseT)$y, 
