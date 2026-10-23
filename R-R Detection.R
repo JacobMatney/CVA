@@ -120,11 +120,11 @@ Dataset_Stim$Beat_Num[S.Peaks$X2] = "beat"
 
 #---- For debugging, ignore ---- 
 #write_xlsx(Dataset_Base, "Data.xlsx")
-#Pan1 <<- plot(x = 1:length(B.Raw.ECG[1:10000]), y = B.Raw.ECG[1:10000], type = "l", xaxt = "n", yaxt = "n", ann = FALSE, bty = "n")
-#Pan2 <<- plot(x = 1:length(B.Fil.ECG[1:10000]), y = B.Fil.ECG[1:10000], type = "l", xaxt = "n", yaxt = "n", ann = FALSE, bty = "n")
-#Pan3 <<- plot(x = 1:length(B.Fil2.ECG[1:10000]), y = B.Fil2.ECG[1:10000], type = "l", xaxt = "n", yaxt = "n", ann = FALSE, bty = "n")
-#Pan4 <<- plot(x = 1:length(B.Sqr.ECG[1:10000]), y = B.Sqr.ECG[1:10000], type = "l", xaxt = "n", yaxt = "n", ann = FALSE, bty = "n")
-#Pan5 <<- plot(x = 1:length(B.Move.Av.ECG[1:10000]), y = B.Move.Av.ECG[1:10000], type = "l", xaxt = "n", yaxt = "n", ann = FALSE, bty = "n")
+Pan1 <<- plot(x = 1:length(B.Raw.ECG[1:10000]), y = B.Raw.ECG[1:10000], type = "l", xaxt = "n", yaxt = "n", ann = FALSE, bty = "n")
+Pan2 <<- plot(x = 1:length(B.Fil.ECG[1:10000]), y = B.Fil.ECG[1:10000], type = "l", xaxt = "n", yaxt = "n", ann = FALSE, bty = "n")
+Pan3 <<- plot(x = 1:length(B.Fil2.ECG[1:10000]), y = B.Fil2.ECG[1:10000], type = "l", xaxt = "n", yaxt = "n", ann = FALSE, bty = "n")
+Pan4 <<- plot(x = 1:length(B.Sqr.ECG[1:10000]), y = B.Sqr.ECG[1:10000], type = "l", xaxt = "n", yaxt = "n", ann = FALSE, bty = "n")
+Pan5 <<- plot(x = 1:length(B.Move.Av.ECG[1:10000]), y = B.Move.Av.ECG[1:10000], type = "l", xaxt = "n", yaxt = "n", ann = FALSE, bty = "n")
 #-------------------------------
 
 #---- Create plots ---- 
