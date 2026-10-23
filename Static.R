@@ -248,7 +248,8 @@ Static_Func = function(x,y,z,a,b,d,j, m, f) {
     
     
     Base_Matrix_Df[Base_Matrix_Df$CrCP < 0, c("CrCP", "RAP", "MAP", "MCAv", "CPP", "CPI", "CVCi", "PETCO2")] = NA
-    
+
+    Basetime <<- Base_Matrix_Df
     
     #Remove first and last detected beats (due to likely half cardiac cycles at start and end of stage)
     Base_end_beat = length(Base_Matrix_Df$Beat) 
